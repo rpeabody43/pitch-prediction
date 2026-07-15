@@ -1,0 +1,10 @@
+[project]
+name = "pitch-prediction"
+version = "0.1.0"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.setuptools]
+py-modules = ["config"]
