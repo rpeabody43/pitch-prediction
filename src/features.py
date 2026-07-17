@@ -65,6 +65,9 @@ def add_lag_features(df: pd.DataFrame, n_lags: int = config.N_LAGS) -> pd.DataFr
         df[f"prev_pfx_x_{lag}"] = grp["pfx_x"].shift(lag).fillna(config.SENTINEL)
         df[f"prev_pfx_z_{lag}"] = grp["pfx_z"].shift(lag).fillna(config.SENTINEL)
         df[f"prev_spin_{lag}"] = grp["release_spin_rate"].shift(lag).fillna(-1)
+        df[f"prev_pitch_type_{lag}"] = (
+            grp["pitch_type_idx"].shift(lag).fillna(-1).astype(int).astype("category")
+        )
 
         # result booleans
         df[f"prev_whiff_{lag}"] = (

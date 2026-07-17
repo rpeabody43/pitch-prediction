@@ -59,4 +59,6 @@ XGB_PARAMS = {
     "n_estimators": 300,
     "subsample": 0.8,
     "colsample_bytree": 0.8,
+    "tree_method": "hist",
+    "enable_categorical": True,
 }

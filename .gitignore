@@ -3,3 +3,7 @@ data/
 *.egg-info
 __pycache__/
 models/
+.ENV
+.jupyter/
+.jupyter_ystore.db
+notebooks/.ipynb_checkpoints/
